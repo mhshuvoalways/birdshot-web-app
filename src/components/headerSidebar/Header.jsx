@@ -1,5 +1,6 @@
 import SearchInput from "../input/SearchInput";
 import IconItem from "../icons/IconItem";
+import UserMenu from "./UserMenu";
 
 const Header = ({ toggleSidebar }) => {
   return (
@@ -15,10 +16,7 @@ const Header = ({ toggleSidebar }) => {
           <IconItem icon={"fa-solid fa-question"} />
           <IconItem icon={"fa-solid fa-bell"} />
           <i className="border h-10 border-thirdly hidden md:block"></i>
-          <div className="flex items-center gap-2 cursor-pointer">
-            <img src="/user.png" className="w-10 h-10 rounded-full" />
-            <p className="font-semibold hidden md:block">John Doe</p>
-          </div>
+          <UserMenu />
         </div>
       </div>
     </div>
