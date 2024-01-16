@@ -1,0 +1,63 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+  }
+  h1 {
+    @apply text-5xl sm:text-7xl;
+  }
+  h2 {
+    @apply text-3xl sm:text-5xl;
+  }
+  h3 {
+    @apply text-xl sm:text-3xl;
+  }
+  h4 {
+    @apply text-lg sm:text-xl;
+  }
+  h5 {
+    @apply text-lg;
+  }
+}
+
+@layer components {
+  .card {
+    @apply rounded-3xl bg-firstly p-7;
+  }
+  .btn1 {
+    @apply bg-fourthly w-full p-5 rounded-lg text-firstly text-4xl font-semibold;
+  }
+  .btn2 {
+    @apply bg-fifthly w-6/12 p-3 rounded-lg text-firstly text-2xl font-semibold;
+  }
+}
+
+@layer utilities {
+  .mycontainer {
+    width: 100%;
+  }
+  @media (min-width: 640px) {
+    .mycontainer {
+      max-width: 640px;
+    }
+  }
+  @media (min-width: 768px) {
+    .mycontainer {
+      max-width: 768px;
+    }
+  }
+  @media (min-width: 1024px) {
+    .mycontainer {
+      max-width: 1024px;
+    }
+  }
+  @media (min-width: 1280px) {
+    .mycontainer {
+      max-width: 1280px;
+    }
+  }
+}
