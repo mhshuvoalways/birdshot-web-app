@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import HeaderSidebar from "../components/headerSidebar";
 import Card1 from "../components/card/Card1";
@@ -22,6 +23,10 @@ const items = [
 ];
 
 const Dashboard = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <HeaderSidebar>
       <div className="flex justify-between gap-10 flex-wrap lg:flex-nowrap">

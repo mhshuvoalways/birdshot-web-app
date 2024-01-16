@@ -1,9 +1,14 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import HeaderSidebar from "../components/headerSidebar";
 import Videos from "../components/videos";
 import User from "../components/icons/User";
 
 const Upload = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <HeaderSidebar>
       <div>

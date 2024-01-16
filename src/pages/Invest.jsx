@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import HeaderSidebar from "../components/headerSidebar";
 import JoinNow from "../components/buttons/JoinNow";
@@ -10,6 +11,10 @@ import Videos from "../components/videos";
 const btnItems = ["Application", "Web App", "Platform"];
 
 const Upload = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <HeaderSidebar>
       <div className="flex justify-between items-center">
