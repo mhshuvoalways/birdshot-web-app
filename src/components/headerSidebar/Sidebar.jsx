@@ -30,7 +30,7 @@ const menus = [
     id: 5,
     name: "My Account",
     icon: "fa-thin fa-user",
-    href: "/myaccount",
+    href: "/my-account",
   },
 ];
 
@@ -63,7 +63,7 @@ const Sidebar = ({ children, isOpen, toggleSidebar }) => {
                 key={el.id}
                 className={({ isActive }) =>
                   isActive
-                    ? "flex items-center gap-2 cursor-pointer my-10 text-fourthly"
+                    ? "flex items-center gap-2 cursor-pointer my-10 text-fourthly font-semibold"
                     : "flex items-center gap-2 cursor-pointer my-10"
                 }
               >
