@@ -10,6 +10,7 @@ export default {
         fourthly: "#6068fa",
         fifthly: "#22c55e",
         sixthly: "#f9fafb",
+        seventhly: "#4b5563",
       },
     },
   },

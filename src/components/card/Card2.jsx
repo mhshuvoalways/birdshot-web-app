@@ -4,7 +4,7 @@ const card2 = () => {
   return (
     <div className="card">
       <img src="/images/card2.jpg" className="rounded-3xl" />
-      <div className="w-full sm:w-40 flex justify-center items-center gap-3 bg-fourthly text-firstly py-1.5 px-3 mt-4 rounded-xl">
+      <div className="w-full sm:w-40 flex justify-center items-center gap-3 bg-fourthly text-firstly py-2 px-3 mt-4 rounded-xl">
         <i className="fa-solid fa-pen text-xs"></i>
         <p className="text-xs">Application Review</p>
       </div>

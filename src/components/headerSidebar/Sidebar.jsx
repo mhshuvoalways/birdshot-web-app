@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Header from "./Header";
 
 const menus = [
@@ -18,7 +18,7 @@ const menus = [
     id: 3,
     name: "Ranking",
     icon: "fa-thin fa-chart-simple",
-    href: "/",
+    href: "/ranking",
   },
   {
     id: 4,
@@ -30,7 +30,7 @@ const menus = [
     id: 5,
     name: "My Account",
     icon: "fa-thin fa-user",
-    href: "/",
+    href: "/myaccount",
   },
 ];
 
@@ -58,16 +58,20 @@ const Sidebar = ({ children, isOpen, toggleSidebar }) => {
           <div className="mt-16">
             <p className="text-xs text-thirdly">Overview</p>
             {menus.map((el) => (
-              <Link
+              <NavLink
                 to={el.href}
                 key={el.id}
-                className="flex items-center gap-2 cursor-pointer my-10"
+                className={({ isActive }) =>
+                  isActive
+                    ? "flex items-center gap-2 cursor-pointer my-10 text-fourthly"
+                    : "flex items-center gap-2 cursor-pointer my-10"
+                }
               >
                 <p className="text-lg bg-sixthly w-8 h-8 rounded-full flex justify-center items-center">
                   <i className={`${el.icon}`} />
                 </p>
                 <p>{el.name}</p>
-              </Link>
+              </NavLink>
             ))}
             <Link
               to="/"

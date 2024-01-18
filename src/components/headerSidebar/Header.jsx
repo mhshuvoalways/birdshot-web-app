@@ -12,7 +12,7 @@ const Header = ({ toggleSidebar }) => {
           </button>
           <SearchInput className="w-full" />
         </div>
-        <div className="flex justify-end md:justify-between items-center gap-2 sm:gap-5 md:w-[30%]">
+        <div className="flex justify-end items-center gap-2 sm:gap-5 w-[30%]">
           <IconItem icon={"fa-solid fa-question"} />
           <IconItem icon={"fa-solid fa-bell"} />
           <i className="border h-10 border-thirdly hidden md:block"></i>

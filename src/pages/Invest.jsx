@@ -34,9 +34,8 @@ const Upload = () => {
         <div className="relative p-10 text-firstly">
           <div className="font-semibold">
             <h4>Birdshot Algorithm</h4>
-            <h2 className="mt-5">
-              Earn company share by contributing{" "}
-              <br className="hidden md:block" /> in marketing
+            <h2 className="mt-5 leading-snug">
+              Earn company share by contributing in marketing
             </h2>
           </div>
           <JoinNow />
@@ -44,7 +43,7 @@ const Upload = () => {
       </div>
       <div className="mt-10 flex items-center flex-wrap lg:flex-nowrap justify-between gap-5">
         <SearchInput className={"w-full min-w-32"} />
-        <div className="flex items-center gap-1 sm:gap-3 w-full flex-wrap sm:flex-nowrap">
+        <div className="flex items-center gap-2 sm:gap-3 w-full flex-wrap sm:flex-nowrap">
           {btnItems.map((el, index) => (
             <motion.p
               whileTap={{ scale: 0.9 }}
@@ -99,7 +98,7 @@ const Upload = () => {
             className="rounded-3xl w-full md:min-w-96 md:w-4/12"
           />
           <div className="w-full md:w-auto">
-            <h1 className="font-medium">Channel Name</h1>
+            <h2>Channel Name</h2>
             <p className="font-medium text-thirdly mt-5">
               jonathan20240101@gmail.com
             </p>
@@ -200,7 +199,7 @@ const Upload = () => {
             <div className="relative p-10 text-firstly">
               <div className="font-semibold">
                 <h4>Birdshot Algorithm</h4>
-                <h2 className="mt-5">
+                <h2 className="mt-5 leading-snug">
                   Earn company share by contributing in marketing
                 </h2>
               </div>

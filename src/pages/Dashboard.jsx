@@ -1,4 +1,4 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { motion } from "framer-motion";
 import HeaderSidebar from "../components/headerSidebar";
 import Card1 from "../components/card/Card1";
@@ -12,20 +12,30 @@ const items = [
     id: 1,
     image: "/images/mobile.png",
     title: "Video Upload",
-    icon: "fa-thin fa-heart",
   },
   {
     id: 2,
     image: "/images/mobile.png",
     title: "App Review",
-    icon: "fa-thin fa-heart",
   },
 ];
 
 const Dashboard = () => {
+  const [selectedHeartIcon, setSelectHeartIcon] = useState([]);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+
+  const selectedHeartIconHander = (item) => {
+    const isItemInArray = selectedHeartIcon.find((el) => el.id === item.id);
+    if (isItemInArray) {
+      const newTemp = selectedHeartIcon.filter((el) => el.id !== item.id);
+      setSelectHeartIcon(newTemp);
+    } else {
+      setSelectHeartIcon((prev) => [...prev, item]);
+    }
+  };
 
   return (
     <HeaderSidebar>
@@ -34,9 +44,8 @@ const Dashboard = () => {
           <div className="bg-fourthly text-firstly rounded-3xl p-10 relative">
             <img src="icons/star.png" className="absolute right-0 top-0 w-28" />
             <h5 className="font-medium">Birdshot Algorithm</h5>
-            <h2 className="mt-1 font-semibold">
-              Earn company share by contributing{" "}
-              <br className="hidden md:block" /> in marketing
+            <h2 className="mt-5 font-semibold leading-snug">
+              Earn company share by contributing in marketing
             </h2>
             <JoinNow />
           </div>
@@ -73,17 +82,21 @@ const Dashboard = () => {
                     className="w-20 lg:w-4/12 rounded-2xl border-fourthly border-2"
                   />
                   <div>
-                    <motion.p
-                      whileTap={{
-                        scale: 0.9,
-                      }}
-                      className="font-semibold"
-                    >
-                      {el.title}
-                    </motion.p>
+                    <p className="font-semibold">{el.title}</p>
                     <p className="text-thirdly">{el.title}</p>
                   </div>
-                  <i className={el.icon}></i>
+                  <motion.i
+                    key={el.id}
+                    whileTap={{
+                      scale: 0.9,
+                    }}
+                    className={`cursor-pointer fa-heart ${
+                      selectedHeartIcon.find((heart) => heart.id === el.id)
+                        ? "fa-solid"
+                        : "fa-thin"
+                    }`}
+                    onClick={() => selectedHeartIconHander(el)}
+                  ></motion.i>
                 </div>
               ))}
             </div>

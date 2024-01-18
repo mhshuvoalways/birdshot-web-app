@@ -6,6 +6,7 @@
   body {
     font-family: "Roboto", sans-serif;
     overflow-x: hidden;
+    @apply text-seventhly;
   }
   h1 {
     @apply text-5xl sm:text-7xl;
@@ -29,10 +30,10 @@
     @apply rounded-3xl bg-firstly p-7;
   }
   .btn1 {
-    @apply bg-fourthly w-full p-5 rounded-lg text-firstly text-4xl font-semibold;
+    @apply bg-fourthly w-full p-4 rounded-lg text-firstly text-2xl sm:text-3xl font-semibold;
   }
   .btn2 {
-    @apply bg-fifthly w-6/12 p-3 rounded-lg text-firstly text-2xl font-semibold;
+    @apply bg-fifthly w-6/12 p-3 rounded-lg text-firstly text-xl sm:text-2xl font-semibold;
   }
 }
 
